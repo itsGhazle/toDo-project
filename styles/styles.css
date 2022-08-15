@@ -1,0 +1,43 @@
+a {
+  text-decoration: none;
+}
+
+.section-1 {
+  width: 100%;
+  padding: 50px;
+}
+.nav-link.active {
+  color: #1266f1;
+  border-color: #1266f1;
+}
+.text-input {
+  border: 1px solid #bdbdbd;
+  border-radius: 4px;
+  min-height: auto;
+  padding: 5px 10px;
+}
+.submit-btn {
+  box-shadow: 0 2px 5px 0 rgb(0 0 0 / 20%), 0 2px 10px 0 rgb(0 0 0 / 10%);
+  color: white;
+}
+.content-listGroup {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  padding-left: 0;
+}
+.listGroup-items {
+  display: flex;
+  align-items: center;
+  background-color: #f4f6f7;
+  padding: 15px 20px;
+  margin: 5px 0;
+  border-radius: 4px;
+}
+.strike {
+  text-decoration: line-through;
+}
+
+element.style {
+  box-shadow: 0 2px 15px -3px rgb(0 0 0 / 7%), 0 10px 20px -2px rgb(0 0 0 / 4%);
+}

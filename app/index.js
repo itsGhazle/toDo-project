@@ -3,25 +3,25 @@ $(document).ready(function () {
   $(".tasks").html(localStorage.getItem("listItems"));
 
   // Show the first tab
-  $("#tabs-nav li:first").on("click", function () {
+
+  $("#tabs-nav #first-tab").on("click", function () {
     $(".tasks").html(localStorage.getItem("listItems"));
     $(".listGroup").show();
   });
 
   // show the second tab
-  $("#tabs-nav li:nth-child(2)").on("click", function () {
+
+  $("#tabs-nav #second-tab").on("click", function () {
     $(".tasks").html(localStorage.getItem("listItems"));
     $(".listGroup-items span.completed").parent().hide();
   });
 
-  // show the last tab
-  $("#tabs-nav li:last-child").on("click", function () {
+  // show the third tab
+
+  $("#tabs-nav #third-tab").on("click", function () {
     $(".tasks").html(localStorage.getItem("listItems"));
     $(".listGroup-items span:not(.completed)").parent().hide();
   });
-
-  // // check for data in localStorage
-  // $(".tasks").html(localStorage.getItem("listItems"));
 
   // adding items in todos
 
@@ -40,25 +40,13 @@ $(document).ready(function () {
 
   // remove todos
 
-  // $(document).on("change", ".checkbox", function () {
-  //   if ($(this).prop("checked")) {
-  //     $(this).prop("checked", true);
-  //   } else {
-  //     $(this).prop("checked", false);
-  //   }
-
-  //   $(this).parent().toggleClass("completed");
-
-  //   localStorage.setItem("listItems", $(".tasks").html());
-  // });
   $(document).on("click", ".complete", function () {
     $(this).parent().siblings("span").toggleClass("completed");
-
     localStorage.setItem("listItems", $(".tasks").html());
   });
+
   $(document).on("click", ".remove", function () {
     $(this).parentsUntil(".listGroup").remove();
-
     localStorage.setItem("listItems", $(".tasks").html());
   });
 });
